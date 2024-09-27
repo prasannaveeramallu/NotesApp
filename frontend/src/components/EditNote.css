@@ -1,0 +1,93 @@
+.bg-container{
+   background-color: rgb(250, 221, 148);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 100vh;
+
+}
+
+.note-container{
+    background-color: rgb(255, 242, 208);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    height: 50vh;
+}
+
+
+
+.desc-input{
+    border-width: 0px;
+    background-color: rgb(255, 242, 208);
+    width: 80vw;
+    height: 40vh;
+    overflow: auto;
+    resize: none;
+    
+
+}
+
+.title-input{
+    height: 20px;
+    border-width: 0px;
+    background-color: rgb(255, 242, 208);
+    width: 80vw;
+   
+    overflow: auto;
+    resize: none;
+    
+}
+
+
+.note-container textarea:focus{
+   outline: none;
+}
+
+
+
+.save-btn{
+    display: flex;
+    justify-content: end;
+    margin-right: 30px;
+    
+}
+
+.save-btn button{
+    padding: 5px;
+    height: 30px;
+    width: 60px;
+    background-color: rgb(188, 155, 72);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.save-btn button:hover{
+    cursor: pointer;
+    background-color: rgb(151, 124, 53);
+}
+
+.back-btn{
+    display: flex;
+    justify-content: start;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-left: 20px;
+    
+}
+
+.back-btn button{
+    padding: 5px;
+    height: 30px;
+    width: 60px;
+    background-color: rgb(188, 155, 72);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.back-btn button:hover{
+    cursor: pointer;
+    background-color: rgb(151, 124, 53);
+}
