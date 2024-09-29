@@ -12,19 +12,10 @@ from .serializers import NotesSerializer,UserSerializer
 from .models import Notes
 from django.contrib.auth.hashers import make_password,check_password
 
-'''@api_view(['GET'])
-def displayUsers(request):
-       
-        queryset = User.objects.all()
-        serializer = UserSerializer(queryset)
-        return Response(serializer.data)'''
-
-
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-
 
 
 @api_view(['POST'])
@@ -43,8 +34,6 @@ def signup(request):
 @api_view(['POST'])
 def login(request):
         user = get_object_or_404(User, username=request.data['username'])
-        #if not user.check_password(request.data['password']):
-        #    return Response("missing user", status=status.HTTP_404_NOT_FOUND)
         if not user.check_password(request.data['password']):
             return Response("missing user", status=status.HTTP_404_NOT_FOUND)
         token, created = Token.objects.get_or_create(user=user)
