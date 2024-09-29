@@ -19,4 +19,3 @@ urlpatterns = [
     path('', include(router.urls)),
 ]
 
-#{ "password": "latha", "new_password": "test123" }
